@@ -54,7 +54,7 @@ def test_cleanup_report_with_errors() -> None:
 def test_cleanup_removes_expired_smoke_projects(tmp_path: Path) -> None:
     """Smoke project older than retention gets removed."""
     settings = _settings(tmp_path, smoke_days=0)  # any age qualifies
-    
+
     proj_dir = settings.project_root / "smoke-test-001"
     proj_dir.mkdir(parents=True)
     (proj_dir / "source").mkdir()
