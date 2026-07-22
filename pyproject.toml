@@ -24,7 +24,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=8,<9", "pytest-asyncio>=0.24,<1"]
+dev = ["pytest>=8,<9", "pytest-asyncio>=0.24,<1", "reportlab>=4,<6"]
 
 [tool.ruff]
 exclude = [
@@ -38,8 +38,7 @@ exclude = [
 
 [tool.ruff.lint]
 ignore = [
-  # Lines in existing codebases that pre‑date Phase H
-  "F401", "F403", "F405", "F821", "F841", "E402", "E501",
+  "F401", "F403", "F405", "F541", "F821", "F841", "E402", "E501",
   "W291", "W293",
   "D100", "D101", "D102", "D103", "D104", "D105", "D106", "D107",
   "N801", "N802", "N803", "N806", "N815", "N816", "N818",
@@ -64,7 +63,6 @@ ignore = [
   "DTZ005",
   "ERA001",
   "ASYNC230",
-  "F541",
 ]
 
 [tool.ruff.format]
